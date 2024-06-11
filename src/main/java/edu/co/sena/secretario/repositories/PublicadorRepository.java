@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PublicadorRepository
-    extends
-    JpaRepository<PublicadorEntity, Long>,
-    JpaSpecificationExecutor<PublicadorEntity> {
+        extends
+        JpaRepository<PublicadorEntity, Long>,
+        JpaSpecificationExecutor<PublicadorEntity> {
 }

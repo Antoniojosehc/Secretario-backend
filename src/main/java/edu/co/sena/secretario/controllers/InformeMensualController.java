@@ -42,4 +42,10 @@ public class InformeMensualController {
         this.service.delete(idPublicador, anio, mes);
         return "ok";
     }
+
+    // Nuevo método para obtener informes de un publicador específico
+    @GetMapping("/publicador/{idPublicador}")
+    public List<InformeMensualDto> getInformesByPublicador(@PathVariable("idPublicador") Long idPublicador) {
+        return this.service.getInformesByPublicador(idPublicador);
+    }
 }

@@ -88,4 +88,23 @@ public class InformeMensualService {
         InformeMensualId informeMensualId = new InformeMensualId(anio, mes, idPublicador);
         informeMensualRepository.deleteById(informeMensualId);
     }
+
+    public List<InformeMensualDto> getInformesByPublicador(Long idPublicador) {
+        List<InformeMensualEntity> informes = informeMensualRepository.findByPublicadorId(idPublicador);
+        List<InformeMensualDto> dtos = new ArrayList<>();
+
+        for (InformeMensualEntity entity : informes) {
+            InformeMensualDto dto = new InformeMensualDto();
+            dto.setAnio(entity.getAnio());
+            dto.setMes(entity.getMes());
+            dto.setPublicaciones(entity.getPublicaciones());
+            dto.setVideos(entity.getVideos());
+            dto.setHoras(entity.getHoras());
+            dto.setIdPublicador(entity.getPublicador().getId());
+
+            dtos.add(dto);
+        }
+
+        return dtos;
+    }
 }
