@@ -23,7 +23,6 @@ public class InformeMensualService {
 
     public void create(InformeMensualDto dto) {
         InformeMensualEntity entity = new InformeMensualEntity();
-
         entity.setAnio(dto.getAnio());
         entity.setMes(dto.getMes());
         entity.setPublicaciones(dto.getPublicaciones());
