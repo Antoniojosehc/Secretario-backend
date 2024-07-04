@@ -23,6 +23,8 @@ public class PublicadorDto {
 
     private String notes;
 
+    private String keyWord;
+
     private String avatar;
 
 

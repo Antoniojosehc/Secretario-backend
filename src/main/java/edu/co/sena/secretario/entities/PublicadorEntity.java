@@ -31,6 +31,9 @@ public class PublicadorEntity {
     @Column(name = "notes")
     private String notes;
 
+    @Column(name = "keyword")
+    private String keyWord;
+
     @Column(name = "avatar")
     private String avatar;
 }

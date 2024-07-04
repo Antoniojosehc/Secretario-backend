@@ -23,6 +23,7 @@ public class PublicadorService {
         entity.setBaptismDate(dto.getBaptismDate());
         entity.setSex(dto.getSex());
         entity.setNotes(dto.getNotes());
+        entity.setKeyWord(dto.getKeyWord());
         entity.setAvatar(dto.getAvatar());
 
         this.repository.save(entity);
@@ -42,6 +43,7 @@ public class PublicadorService {
             dto.setBaptismDate(currentEntity.getBaptismDate());
             dto.setSex(currentEntity.getSex());
             dto.setNotes(currentEntity.getNotes());
+            dto.setKeyWord(currentEntity.getKeyWord());
             dto.setAvatar(currentEntity.getAvatar());
 
             dtos.add(dto);
@@ -63,6 +65,7 @@ public class PublicadorService {
         dto.setBaptismDate(entity.getBaptismDate());
         dto.setSex(entity.getSex());
         dto.setNotes(entity.getNotes());
+        dto.setKeyWord(entity.getKeyWord());
         dto.setAvatar(entity.getAvatar());
 
         return dto;
@@ -77,6 +80,7 @@ public class PublicadorService {
         entity.setBaptismDate(dto.getBaptismDate());
         entity.setSex(dto.getSex());
         entity.setNotes(dto.getNotes());
+        entity.setKeyWord(dto.getKeyWord());
         entity.setAvatar(dto.getAvatar());
 
         this.repository.save(entity);
