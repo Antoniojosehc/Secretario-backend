@@ -23,5 +23,7 @@ public class PublicadorDto {
 
     private String notes;
 
+    private String avatar;
+
 
 }
